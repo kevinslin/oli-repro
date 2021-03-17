@@ -1,0 +1,24 @@
+vaults:
+    -
+        fsPath: repos/Modelling-Management-Notes
+        remote:
+            type: git
+            url: 'https://github.com/olivercrask/Modelling-Management-Notes.git'
+        name: secure
+        visibility: private
+    -
+        fsPath: vault
+site:
+    copyAssets: true
+    siteHierarchies:
+        - root
+    siteRootDir: docs
+    usePrettyRefs: true
+    title: Dendron
+    siteUrl: https://main.secret.amplifyapp.com/
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - secure
+            - vault
+version: 1
